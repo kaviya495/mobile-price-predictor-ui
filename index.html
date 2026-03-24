@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Price Predictor</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        input, button { padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>📱 Mobile Price Predictor</h1>
+
+    <input type="number" id="ram" placeholder="Enter RAM (GB)">
+    <input type="number" id="storage" placeholder="Enter Storage (GB)">
+    <br>
+    <button onclick="predict()">Predict Price</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function predict() {
+            let ram = document.getElementById("ram").value;
+            let storage = document.getElementById("storage").value;
+
+            if(ram && storage){
+                let price = (ram * 5000) + (storage * 200);
+                document.getElementById("result").innerText =
+                    "Estimated Price: ₹" + price;
+            } else {
+                document.getElementById("result").innerText =
+                    "Please enter all values";
+            }
+        }
+    </script>
+
+</body>
+</html>
