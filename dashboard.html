@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Mobile Price Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: #1e293b;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card {
+            display: inline-block;
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #22c55e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #4ade80;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        📊 User Dashboard
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>Total Predictions</h3>
+            <h2>128</h2>
+        </div>
+
+        <div class="card">
+            <h3>Avg Price</h3>
+            <h2>₹25,000</h2>
+        </div>
+
+        <div class="card">
+            <h3>Last Prediction</h3>
+            <h2>₹18,400</h2>
+        </div>
+
+        <br>
+        <button class="btn" onclick="goHome()">⬅ Back to Predictor</button>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = "/";
+        }
+    </script>
+
+</body>
+</html>
